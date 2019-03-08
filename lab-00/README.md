@@ -5,9 +5,8 @@ In this lab we will be installing the OpenShift CLI tools, better know as the
 
 ## Task 1: Downloading the binary
 
-Download the binary from the following location:
-
-https://mirror.openshift.com/pub/openshift-v3/clients/3.11.93/macosx/oc.tar.gz
+Download the binary from [here](https://mirror.openshift.com/pub/openshift-v3/clients/3.11.93/macosx/oc.tar.gz)
+into your home directory:
 
 ```
 curl -o ~/oc.tar.gz https://mirror.openshift.com/pub/openshift-v3/clients/3.11.93/macosx/oc.tar.gz
