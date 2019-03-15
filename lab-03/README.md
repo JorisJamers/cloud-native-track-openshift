@@ -48,3 +48,8 @@ Click onto running pod, it shows the details on the pod. In addition,
 metrics, logs and terminal also available for monitoring.
 
 ![project_pod_details](../images/project_pod_details.png "project_pod_details")
+
+Click on `Terminal` tab, you will be able to access the pod from web
+console.
+
+![terminal_view.png](../images/terminal_view.png "terminal_view")
