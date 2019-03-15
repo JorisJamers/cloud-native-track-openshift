@@ -190,16 +190,16 @@ this one.
 
 Next, tick on `Split traffic across multiple services`
 
-![g-slipt-traffic](../images/g-slipt-traffic "g-slipt-traffic")
+![g-slipt-traffic](../images/bg-slipt-traffic.png "g-slipt-traffic")
 
 Here, set the weight to 50% on blue and 50% on green. This will make it to where half the
 traffic will go to the green application and half to the blue application.
 
-![bg-5050-split](../images/bg-5050-split "bg-5050-split")
+![bg-5050-split](../images/bg-5050-split.png "bg-5050-split")
 
 Once you click on `Save`; you should see this on the Route Overview page.
 
-![bg-route-split-overview](../images/bg-route-split-overview "bg-route-split-overview")
+![bg-route-split-overview](../images/bg-route-split-overview.png "bg-route-split-overview")
 
 You are able to test your settings now. If you try and visit your application; you'll notice it won't "switch" over
 to the other application. This is because the default behavior is:
@@ -212,4 +212,4 @@ To get "true" round robin; annotate your route with the following
 ```
 oc annotate route/bluegreen haproxy.router.openshift.io/balance=roundrobin
 oc annotate route/bluegreen haproxy.router.openshift.io/disable_cookies=true
-``` 
+```
