@@ -15,7 +15,7 @@ image::images/login.png[image]
 
 Login with the `username` and `password` provided by the instructor. You will now see the Service Catalog. Your created project will be listed on the right.
 
-![service_catalog](../images/service_catalog "service_catalog")
+![service_catalog](../images/service_catalog.png "service_catalog")
 
 ick on "View All" on the right. You will see the list of projects now.
 Note the project you created in the last lab exercise is shown here.
