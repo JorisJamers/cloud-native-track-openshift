@@ -46,7 +46,7 @@ If you click the `MAC Openshift oc download` it will automatically download the
 binary you need to your default download folder.
 
 Browse to the download folder via your terminal and do the following commando in
-the map you recently downloaded. `openshift-origin-client-tools-v1`
+the folder you recently downloaded. `openshift-origin-client-tools-v1`
 
 Now do the following command.
 
@@ -55,4 +55,4 @@ mv oc /usr/local/bin/
 ```
 
 Now you are able to login to your minishift with the credentials given by the
-instance. 
+instance.
