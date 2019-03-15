@@ -11,4 +11,11 @@ Type in the master public URL provided by your instructor in a browser. Use
 
 image::images/login.png[image]
 
-Login with the `username` and `password` provided by the instructor.
+Login with the `username` and `password` provided by the instructor. You will now see the Service Catalog. Your created project will be listed on the right.
+
+image::images/service_catalog.png[image]
+
+ick on "View All" on the right. You will see the list of projects now.
+Note the project you created in the last lab exercise is shown here.
+
+image::images/projects_list.png[image]
