@@ -9,7 +9,8 @@ Type in the master public URL provided by your instructor in a browser. Use
 
 > Your browser may complain about the server’s security certificates not trusted by your computer. You can agree to proceed to the master URL.
 
-[login]: images/login.png "Login"
+![login](../images/login.png "Login")
+
 image::images/login.png[image]
 
 Login with the `username` and `password` provided by the instructor. You will now see the Service Catalog. Your created project will be listed on the right.
