@@ -1,13 +1,13 @@
 # Lab 02 - Creating an app using Docker build
 
-In this exercise we will learn how to create an application from a Dockerfile. 
-OpenShift takes Dockerfile as an input and generates your application Docker 
+In this exercise we will learn how to create an application from a Dockerfile.
+OpenShift takes Dockerfile as an input and generates your application Docker
 image for you.
 
 ## Task 1: Creating a project or use an existing project
 
-If you want to, you can create a new project based on what you have learned in 
-the previous lab. Since we already have a project we will use it. Run the 
+If you want to, you can create a new project based on what you have learned in
+the previous lab. Since we already have a project we will use it. Run the
 following command to make sure.
 
 ```
@@ -16,26 +16,26 @@ oc project labs-${USERNAME}
 
 ## Task 2: Creating an app using a Dockerfile
 
-This time we will use a project that has a Dockerfile in a source code 
+This time we will use a project that has a Dockerfile in a source code
 repository. We will use a simple project on github https://github.com/gluobe/time.
-The `rhel` folder from this github project is built starting with rhel7 as the 
-base image which is described in Dockerfile. Look at the Dockerfile for this 
-project. It starts off with `registry.access.redhat.com/rhel7` image. It copies 
+The `rhel` folder from this github project is built starting with rhel7 as the
+base image which is described in Dockerfile. Look at the Dockerfile for this
+project. It starts off with `registry.access.redhat.com/rhel7` image. It copies
 the source code which is a simple `init.sh` file and exposes port `8080`.
-Look at the `init.sh` that just displays the current datetime. There is also a 
-PHP version of the same project available in the php folder if you like to use 
-that. The php version does exactly the same it has a `time.php` file that 
+Look at the `init.sh` that just displays the current datetime. There is also a
+PHP version of the same project available in the php folder if you like to use
+that. The php version does exactly the same it has a `time.php` file that
 displays the time.
 
-*Docker Build*: When OpenShift finds a Dockerfile in the source, it uses this 
-Dockerfile as the basis to create a docker image for your application. This 
-strategy is called `Docker Build` strategy on OpenShift. We’ll see more about it 
-when we look at the build configuration a couple of steps down the line. Once 
-OpenShift builds the application’s docker image, it stores that in a local 
-docker registry. Later it uses this image to deploy an application that runs in 
+*Docker Build*: When OpenShift finds a Dockerfile in the source, it uses this
+Dockerfile as the basis to create a docker image for your application. This
+strategy is called `Docker Build` strategy on OpenShift. We’ll see more about it
+when we look at the build configuration a couple of steps down the line. Once
+OpenShift builds the application’s docker image, it stores that in a local
+docker registry. Later it uses this image to deploy an application that runs in
 a pod.
 
-Now let’s create an application using this approach. We will run `oc new-app` 
+Now let’s create an application using this approach. We will run `oc new-app`
 command by supplying the git uri as the parameter.
 
 ```
@@ -63,14 +63,14 @@ oc new-app https://github.com/gluobe/time --context-dir=rhel
     Run 'oc status' to view your app.
 ```
 
-You’ll notice that OpenShift created a few things at this point. You will find a 
-buildconfig, deploymentconfig, service and imagestreams in the above list. The 
-application is not running yet. It needs to be built and deployed. Within a 
+You’ll notice that OpenShift created a few things at this point. You will find a
+buildconfig, deploymentconfig, service and imagestreams in the above list. The
+application is not running yet. It needs to be built and deployed. Within a
 minute or so, you will see that OpenShift starts the build.
 
 ## Task 3: Build
 
-In the meanwhile lets have a look at the buildconfig by running the command 
+In the meanwhile lets have a look at the buildconfig by running the command
 shown below.
 
 ```
@@ -149,9 +149,9 @@ oc get bc time -o yaml
 }
 ```
 
-Note the name of the buildconfig in metadata is set to `time`, the git uri 
-pointing to the value you gave while creating the application. Also note the 
-Strategy.type set to `Docker`. This indicates that the build will use the 
+Note the name of the buildconfig in metadata is set to `time`, the git uri
+pointing to the value you gave while creating the application. Also note the
+Strategy.type set to `Docker`. This indicates that the build will use the
 instructions in this Dockerfile to do the docker build.
 
 Build starts in a minute or so. You can view the list of builds using
@@ -165,10 +165,10 @@ NAME      TYPE      FROM          STATUS     STARTED          DURATION
 time-1    Docker    Git@1ec2d66   Complete   19 minutes ago   1m13s
 ```
 
-Note the name of the build that is running i.e. time-1. We will use that name to 
-look at the build logs. Run the command as shown below to look at the build 
-logs. This will run for a few mins. At the end you will notice that the docker 
-image is successfully created and it will start pushing this to OpenShift’s 
+Note the name of the build that is running i.e. time-1. We will use that name to
+look at the build logs. Run the command as shown below to look at the build
+logs. This will run for a few mins. At the end you will notice that the docker
+image is successfully created and it will start pushing this to OpenShift’s
 internal docker registry.
 
 ```
@@ -186,13 +186,13 @@ Pushed 5/5 layers, 100% complete
 Push successful
 ```
 
-In the above log note how the image is pushed to the local docker registry. The 
+In the above log note how the image is pushed to the local docker registry. The
 registry is running at `docker-registry.default.svc` at port `5000`.
 
 ## Task 4: Deployment
 
-Once the image is pushed to the docker registry, OpenShift will trigger a deploy 
-process. Let us also quickly look at the deployment configuration by running the 
+Once the image is pushed to the docker registry, OpenShift will trigger a deploy
+process. Let us also quickly look at the deployment configuration by running the
 following command. Note dc represents deploymentconfig.
 
 ```
@@ -339,12 +339,12 @@ oc get dc -o yaml
 }
 ```
 
-Note where the image is picked from. It shows that the deployment picks the 
-image from the local registry (same ip address and port as in buildconfig) and 
-the image tag is same as what we built earlier. This means the deployment step 
+Note where the image is picked from. It shows that the deployment picks the
+image from the local registry (same ip address and port as in buildconfig) and
+the image tag is same as what we built earlier. This means the deployment step
 deploys the application image what was built earlier during the build step.
 
-If you get the list of pods, you’ll notice that the application gets deployed 
+If you get the list of pods, you’ll notice that the application gets deployed
 quickly and starts running in its own pod.
 
 ```
@@ -357,7 +357,7 @@ time-1-rqa7c   1/1       Running     0          2h
 
 ## Task 5: Adding route
 
-This step is very much the same as what we did in the previous exercise. We will 
+This step is very much the same as what we did in the previous exercise. We will
 check the service and add a route to expose that service.
 
 ```
@@ -387,15 +387,20 @@ time      time-mycliproject-UserName.apps.workshop.osecloud.com             time
 
 ## Task 6: Running the application
 
-Now run the application by using the route you provided in the previous step. 
-You can use either curl or your browser. The application displays time. 
-*If you don’t provide time.php extension, it displays apache’s default index 
+Now run the application by using the route you provided in the previous step.
+You can use either curl or your browser. The application displays time.
+*If you don’t provide time.php extension, it displays apache’s default index
 page.*
+
+
+```
+minishift openshift service time --in-browser
+```
 
 ```
 curl time-mycliproject-UserName.apps.workshop.osecloud.com
 Wednesday 1st of July 2015 01:12:20 AM
 ```
 
-Congratulations!! In this exercise you have learnt how to create, build and 
+Congratulations!! In this exercise you have learnt how to create, build and
 deploy an application using OpenShift’s `Docker Build strategy`.
