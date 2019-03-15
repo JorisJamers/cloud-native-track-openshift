@@ -156,7 +156,7 @@ instructions in this Dockerfile to do the docker build.
 
 Build starts in a minute or so. You can view the list of builds using
 `oc get builds` command. You can also start the build using
-`oc start-build time` where ``time'' is the name we noticed in the buildconfig.
+`oc start-build time` where `time` is the name we noticed in the buildconfig.
 
 ```
 oc get builds
@@ -391,11 +391,6 @@ Now run the application by using the route you provided in the previous step.
 You can use either curl or your browser. The application displays time.
 *If you don’t provide time.php extension, it displays apache’s default index
 page.*
-
-
-```
-minishift openshift service time --in-browser
-```
 
 ```
 curl time-mycliproject-UserName.apps.workshop.osecloud.com

@@ -139,10 +139,6 @@ Access the application: Now access the application using curl (looking for 200
 status code) or from the browser and see the result
 
 ```
-minishift openshift service welcome --in-browser
-```
-
-```
 oc get routes
 
 curl -Is <route>
