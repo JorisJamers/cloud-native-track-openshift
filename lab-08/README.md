@@ -5,7 +5,7 @@ lab we will demonstrate the deployment of an application via a GitHub Web Hook
 trigger.
 
 
-## Task 1 : Create a new project
+## Task 1: Create a new project
 
 Export your username environment variable.
 
@@ -19,7 +19,7 @@ Now create the new project with the variable.
 oc new-project scm-web-hooks-${USERNAME} --display-name="Test WebHooks"
 ```
 
-## Task 2 : Create a new application
+## Task 2: Create a new application
 
 We will use a forked repository from the application used in the previous lab.
 Browse to GitHub and fork the following repository https://github.com/RedHatWorkshops/bluegreen.
@@ -28,7 +28,7 @@ Browse to GitHub and fork the following repository https://github.com/RedHatWork
 oc new-app --image-stream=php --code=https://github.com/your_github_username/bluegreen.git --name=scm-web-hooks
 ```
 
-## Task 3 : Look at some of the created resources
+## Task 3: Look at some of the created resources
 
 Check out the build configuration.
 
@@ -108,7 +108,7 @@ oc get route
 
 Past the `HOST/PORT` section in your browser. This will get you to your deployment.
 
-## Task 4 : Configure the github webhook
+## Task 4: Configure the github webhook
 
 After we did the following steps we have created an application with one replica
 running inside a docker container in Openshift.
@@ -121,8 +121,6 @@ this case.
 * Click `Configuration` tab to get list of `Triggers` for the GitHub
 link.
 * Copy the `GitHub webhook URL`. You will need this URL for next step.
-
-> INSERT SCREENSHOT
 
 ![webhook_configuration](../images/webhook_configuration.png "webhook_configuration")
 

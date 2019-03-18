@@ -2,7 +2,7 @@
 
 In this lab we will explore the Openshift Web Console.
 
-## Task 1 : Login to the web console
+## Task 1: Login to the web console
 
 Type in the master public URL provided by your instructor in a browser. Use
 <master public URL>:<port>. You will be directed to an OpenShift login page.
@@ -74,3 +74,10 @@ route.
 deployments. Click onto a deployment, it shows all the details of the
 deployment. By pressing the `Deploy` button, you will be able to start a
 deployment from the web console.
+
+## Task 2: Delete your project
+
+You are also able to delete the project via the `Web Console`. On the upper left
+press the name of your project and click on `View All Projects`. On the right
+side of your projectname you can see 3 dots, click on the `3 dots` and select
+`Delete Project`.

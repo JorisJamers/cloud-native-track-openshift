@@ -3,7 +3,7 @@
 The purpose of this short lab is to demonstrate how simple it is to
 implement Blue-Green Deployments in OpenShift.
 
-## Task 1 : Create a new project
+## Task 1: Create a new project
 
 Remember to either change the username parameter or export it.
 
@@ -15,7 +15,7 @@ export USERNAME=<username>
 oc new-project bluegreen-${USERNAME} --display-name="Blue Green Project" --description="Blue Green Project"
 ```
 
-## Task 2 : Deploy the blue version
+## Task 2: Deploy the blue version
 
 List existing image builder or image streams.
 
@@ -101,7 +101,7 @@ browser.
 oc get route
 ```
 
-## Task 3 : Deploy the green version
+## Task 3: Deploy the green version
 
 Create a new application the same way as you did above in Part I. Make
 sure to name the application as `green` this time.
@@ -175,7 +175,7 @@ bluegreen   bluegreen-bluegreen-${USERNAME}.192.168.99.100.nip.io             gr
 Copy the `HOST/PORT` section of the output in your browser and check out the green
 deployment.
 
-## Task 4 : Route traffic to both services
+## Task 4: Route traffic to both services
 
 First we need to edit the route. Using the lefthand side navigation; click on
 `Applications -> Routes`. This will bring you to the `Route` overview page.
@@ -212,4 +212,13 @@ To get "true" round robin; annotate your route with the following
 ```
 oc annotate route/bluegreen haproxy.router.openshift.io/balance=roundrobin
 oc annotate route/bluegreen haproxy.router.openshift.io/disable_cookies=true
+```
+
+## Task 5 : Delete your project
+
+You can delete your project in the web console or via the CLI with the following
+command.
+
+```
+oc delete project bluegreen-${USERNAME}
 ```

@@ -1,6 +1,6 @@
 # Lab - 06 Routes
 
-## Task 1 Create a project
+## Task 1: Create a project
 
 Export the username environment variable. This to be sure that you are going to
 create the correct objects.
@@ -15,7 +15,7 @@ For this lab we are going to create fresh project. Use the following command.
 oc new-project routes-${USERNAME}
 ```
 
-## Task 2 : Deploy an application and create a route
+## Task 2: Deploy an application and create a route
 
 List existing image builder or image streams.
 
@@ -91,7 +91,7 @@ blue      172.30.52.106   <none>        8080/TCP,8443/TCP   3m
 Now we need to create a route for the service.
 
 ```
-oc expose service blue --name=blue-route 
+oc expose service blue --name=blue-route
 ```
 
 Test the application. Do the following command an paste the `HOST/PORT` to your

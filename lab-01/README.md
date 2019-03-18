@@ -194,3 +194,9 @@ You can run `oc get all` again to make sure the project is empty.
 
 Congratulations!! You now know how to create a project, an application using an
 external docker image and navigate around. Get ready for more fun stuff!
+
+Delete the project with the following command.
+
+```
+oc new-project labs-${USERNAME}
+```
