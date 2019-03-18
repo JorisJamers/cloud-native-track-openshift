@@ -56,3 +56,9 @@ mv oc /usr/local/bin/
 
 Now you are able to login to your minishift with the credentials given by the
 instance.
+
+In order to get access as an admin to our webconsole we need to add the following addon to minishift.
+
+```
+minishift addon apply admin-user
+```
