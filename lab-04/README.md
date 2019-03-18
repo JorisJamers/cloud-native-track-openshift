@@ -1,7 +1,5 @@
 # Lab - 04 Using templates
 
-> NOTE: Guide is not really the same on minishift, needs a good refactor.
-
 ## Task 1 : Create a Project
 
 Login to the web console in case you are not logged in anymore. If you want you
