@@ -11,8 +11,6 @@ Type in the master public URL provided by your instructor in a browser. Use
 
 ![login](../images/login.png "Login")
 
-image::images/login.png[image]
-
 Login with the `username` and `password` provided by the instructor. You will now see the Service Catalog. Your created project will be listed on the right.
 
 ![service_catalog](../images/service_catalog.png "service_catalog")
@@ -54,27 +52,16 @@ console.
 
 ![terminal_view.png](../images/terminal_view.png "terminal_view")
 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-If you click onto the *Metrics* tab under Pod and get an error viewing
-metrics on the browser, please do the following:
+When navigating to `Applications``Pods` you are able to check the metrics for the
+pod you have selected in the `Metrics` tab.
 
-1.  Open https://hawkular.<>/hawkular/metrics from a new tab on the same
-broswer
-2.  Click ``Advanced'' link
-3.  Click ``Proceed to hawkular.<> (unsafe)''
-4.  Refresh the browser where you login at OpenShift console.
+![pod_metrics.png](../images/pod_metrics.png "pod_metrics")
 
-Click *Builds* on left menu and select *Builds*. Select the build name
-*time* and then click on *Configuration* tab. Note there are webhook
+Click `Builds` on left menu and select `Builds`. Select the build name
+`time` and then click on `Configuration` tab. Note there are webhook
 URLs. We will use them in a later lab exercise. You can start a build
-from the Web Console by pressing the *Start Build* button in the right
+from the Web Console by pressing the `Start Build` button in the right
 top corner. It also gives you a command to start the build from CLI.
-
-> DONE WITH MINIKUBE
-> SO THERE ARE NO METRICS
-> INSERT SCREENSHOT HERE
-
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  
 
 * Select `Services` under `Applications` tab, you will find the service
 created for your application. Click onto one of the services, it shows
