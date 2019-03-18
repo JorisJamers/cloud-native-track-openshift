@@ -138,9 +138,29 @@ the page.
 > INSERT SCREENSHOT
 
 * Edit in your GitHub account the `image.php` file.
-* One of the lines in line 9 or 10 should be commented out. Make a
-change so that the line that was previously commented out becomes active
-and pound the other one.
+* There are a number of things you could change, but we are going to change the
+color to a static color. Remove the following lines and add the new line.
+
+To delete :
+
+```
+if ( $deployment == 'blue') {
+  $color = imagecolorallocate($im, 0, 255, 0);
+} elseif ($deployment == 'green')  {
+  $color = imagecolorallocate($im, 0, 255, 0);
+} else {
+  $color = imagecolorallocate($im, 0, 0, 255);
+}
+```
+
+To add :
+
+```
+$color = imagecolorallocate($im, 0,255,0);
+```
+
+This will staticly use the green color. 
+
 * Commit the file.
 
 * After saving/committing the `image.php` file with the small change,
@@ -154,3 +174,5 @@ oc get builds
 
 oc logs build/the-new-build-process-name
 ```
+
+Don't delete your deployment, we are going to use this for the next lab.
