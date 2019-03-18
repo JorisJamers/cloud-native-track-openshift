@@ -14,7 +14,7 @@ matter.
 Press `Create`. You can get the same result from the following command in `CLI`
 
 ```
-oc new-project templateproject-username
+oc new-project templateproject-${USERNAME}
 ```
 
 ## Task 2 : Create a MYSQL database using the template
