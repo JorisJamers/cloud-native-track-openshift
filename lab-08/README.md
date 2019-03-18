@@ -124,6 +124,8 @@ link.
 
 > INSERT SCREENSHOT
 
+![webhook_configuration](../images/webhook_configuration.png "webhook_configuration")
+
 * Login to your GitHub account.
 * Navigate to the forked repository you used to create the application.
 * Click on Settings.
@@ -135,7 +137,8 @@ link.
 * Confirm by adding the `Add Webhook` button in green at the bottom of
 the page.
 
-> INSERT SCREENSHOT
+
+![webhook_config_github](../images/webhook_config_github.png "webhook_config_github")
 
 * Edit in your GitHub account the `image.php` file.
 * There are a number of things you could change, but we are going to change the
@@ -159,7 +162,7 @@ To add :
 $color = imagecolorallocate($im, 0,255,0);
 ```
 
-This will staticly use the green color. 
+This will staticly use the green color.
 
 * Commit the file.
 
