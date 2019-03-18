@@ -178,4 +178,4 @@ oc get builds
 oc logs build/the-new-build-process-name
 ```
 
-Don't delete your deployment, we are going to use this for the next lab.
+Don't delete your deployment, we are going to use this in the next lab.
