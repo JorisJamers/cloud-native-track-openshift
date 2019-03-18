@@ -1,36 +1,36 @@
 # Lab 01 - Creating an app from a Docker image
 
-In this lab you will learn how to create a new project on OpenShift and how to 
+In this lab you will learn how to create a new project on OpenShift and how to
 create an application from an existing docker image.
 
 ## Task 1: Create a new project from command line
 
-We will first exporting your username as a variable, that way it will be easy to 
+We will first exporting your username as a variable, that way it will be easy to
 just copy/paste the commands below.
 
 ```
 export USERNAME=<REPLACE_WITH_YOUR_USERNAME>
 ```
 
-The command below creates a new project and is setting a description and display 
+The command below creates a new project and is setting a description and display
 name for the project.
 
 ```
 oc new-project labs-${USERNAME} --description="My CLI Project - ${USERNAME}" --display-name="CLI Project - ${USERNAME}"
 ```
 
-Upon project creation, OpenShift will automatically switch to the newly created 
-project/namespace. If you wish to view the list of projects, run the following 
+Upon project creation, OpenShift will automatically switch to the newly created
+project/namespace. If you wish to view the list of projects, run the following
 command:
 
 ```
 oc get projects
 ```
 
-If you have more than one project, you can switch to a different one by issuing 
+If you have more than one project, you can switch to a different one by issuing
 `oc project <project name>`. Although you don’t want to do it now.
 
-You can also check the status of the project by running the following command. 
+You can also check the status of the project by running the following command.
 It says that the project is currently not running anything.
 
 ```
@@ -44,11 +44,11 @@ Run 'oc new-app' to create an application.
 
 ## Task 2: Create an app from a Docker image
 
-Next we will create an application inside the above project using an existing 
-docker image. We will be using a very simple Docker image from Docker Hub that 
+Next we will create an application inside the above project using an existing
+docker image. We will be using a very simple Docker image from Docker Hub that
 just says 'Welcome to OpenShift V3. Let us just use that for this exercise.
 
-First create a new application using the docker image using the `oc new-app` 
+First create a new application using the docker image using the `oc new-app`
 command as shown below:
 
 ```
@@ -77,8 +77,8 @@ oc new-app gluobe/welcome-php --name=welcome
     Run 'oc status' to view your app.
 ```
 
-The above command uses the docker image to deploy a docker container in a pod. 
-If you quickly run `oc get pods` you will notice that a deployer pod runs and it 
+The above command uses the docker image to deploy a docker container in a pod.
+If you quickly run `oc get pods` you will notice that a deployer pod runs and it
 starts an application pod as shown below.
 
 ```
@@ -89,8 +89,8 @@ welcome-1-deploy   1/1       Running   0          1m
 welcome-1-dkyyq    0/1       Pending   0          0s
 ```
 
-In the above example `welcome-1-deploy` is the deployer pod and the other one is 
-the actual application pod. In a little while the deployer pod will succeed and 
+In the above example `welcome-1-deploy` is the deployer pod and the other one is
+the actual application pod. In a little while the deployer pod will succeed and
 the application pod will change for `Pending` to `Running` status.
 
 ```
@@ -102,8 +102,8 @@ welcome-1-dkyyq   1/1       Running   0          56s
 
 ## Task 3: Add a route for your app
 
-OpenShift also spins up a service for this application. Run the following 
-command to view the list of services in the project (you can also use 
+OpenShift also spins up a service for this application. Run the following
+command to view the list of services in the project (you can also use
 `oc get svc` shorthand).
 
 ```
@@ -115,11 +115,11 @@ welcome   172.30.77.93   <none>        8080/TCP   2m
 
 You will notice the `welcome` service was created for this project.
 
-However, there is no route for this application yet. So you cannot access this 
+However, there is no route for this application yet. So you cannot access this
 application from outside.
 
-Now add a route to the service with the following command. `oc expose` command 
-will allow you to expose your service to the world so that you can access it 
+Now add a route to the service with the following command. `oc expose` command
+will allow you to expose your service to the world so that you can access it
 from the browser.
 
 *Note*: In this example, I am using a domain name of
@@ -135,7 +135,7 @@ welcome   welcome-labs-trescst.openshift.workshops.gluo.io                      
 
 ## Task 4: Test your app
 
-Access the application: Now access the application using curl (looking for 200 
+Access the application: Now access the application using curl (looking for 200
 status code) or from the browser and see the result
 
 ```
@@ -144,12 +144,12 @@ oc get routes
 curl -Is <route>
 ```
 
-Voila!! you created your first application using an existing docker image on 
+Voila!! you created your first application using an existing docker image on
 OpenShift.
 
 ## Task 5: Clean up
 
-Run the `oc get all` command to view all the components that were created in 
+Run the `oc get all` command to view all the components that were created in
 your project.
 
 ```
@@ -187,10 +187,10 @@ imagestream.image.openshift.io "welcome" deleted
 route.route.openshift.io "welcome" deleted
 ```
 
-You will notice that it has deleted the imagestream for the application, the 
+You will notice that it has deleted the imagestream for the application, the
 deploymentconfig, the service and the route.
 
 You can run `oc get all` again to make sure the project is empty.
 
-Congratulations!! You now know how to create a project, an application using an 
+Congratulations!! You now know how to create a project, an application using an
 external docker image and navigate around. Get ready for more fun stuff!
