@@ -1,10 +1,10 @@
 # Lab - 05 Scaling up/down
 
-## Task 1 : Create a new project
+## Task 1: Create a new project
 
 Create an autoscaling project with the name `autoscalingproject-${USERNAME}`.
 
-## Task 2 : Create application
+## Task 2: Create application
 
 If you deploy an application with Openshift it is very easy to create an
 autoscaler. Autoscalers are used when for example the CPU load of a pod is equal
@@ -31,7 +31,7 @@ application and is not used anymore.
 
 ![autoscaler_pods_1](../images/autoscaler_pods_1.png "autoscaler_pods_1")
 
-## Task 3 : Add autoscaler
+## Task 3: Add autoscaler
 
 Navigate to `Applications` `Deployments` and click on the `jenkins`
 deployment. Navigate to the `Configuration` tab and you will see on the right
@@ -55,7 +55,7 @@ instance.
 
 ![autoscaler_pods_2](../images/autoscaler_pods_2.png "autoscaler_pods_2")
 
-## Task 4 : Delete project
+## Task 4: Delete project
 
 Delete your project with the following command.
 

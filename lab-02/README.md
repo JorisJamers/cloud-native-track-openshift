@@ -11,6 +11,8 @@ the previous lab. Since we already have a project we will use it. Run the
 following command to make sure.
 
 ```
+oc new-project labs-${USERNAME}
+
 oc project labs-${USERNAME}
 ```
 
@@ -399,3 +401,11 @@ Wednesday 1st of July 2015 01:12:20 AM
 
 Congratulations!! In this exercise you have learnt how to create, build and
 deploy an application using OpenShift’s `Docker Build strategy`.
+
+## Task 7 : Delete your project
+
+Delete the project with the following command.
+
+```
+oc delete project labs-${USERNAME}
+```

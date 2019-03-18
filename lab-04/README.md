@@ -1,6 +1,6 @@
 # Lab - 04 Using templates
 
-## Task 1 : Create a Project
+## Task 1: Create a Project
 
 Login to the web console in case you are not logged in anymore. If you want you
 can use a project that you have already created, otherwise create a new one.
@@ -15,7 +15,7 @@ Press `Create`. You can get the same result from the following command in `CLI`
 oc new-project templateproject-${USERNAME}
 ```
 
-## Task 2 : Create a MYSQL database using the template
+## Task 2: Create a MYSQL database using the template
 
 Click on `Add to Project -> Browse Catolog` button and you will be taken to select an
 image or template. You will see the application create screen as shown
@@ -46,7 +46,7 @@ Click `Create`.
 
 Go back to the Dashboard and you will see that a database instance is creating.
 
-## Task 3 : Add a PHP frontend to talk to the database
+## Task 3: Add a PHP frontend to talk to the database
 
 Click on `Add to Project -> Browse Catolog` and click `Languages`. Now choose for
 `PHP` and select the `PHP` template.
@@ -71,7 +71,7 @@ Click `create`.
 Go back to the Dashboard and notice that there are currently 2 applications. You
 might need to wait a little for the php application to become available.
 
-## Task 4 : Initiate the database
+## Task 4: Initiate the database
 
 Now that we have our database and our frontend PHP application we are able to
 initialize the database and start filling the DB with some records.
@@ -120,7 +120,7 @@ the `Read Records` button.
 
 Our first record is in our database.
 
-## Task 5 : Delete your project
+## Task 5: Delete your project
 
 You can delete your project in the web console or via the CLI with the following
 command.

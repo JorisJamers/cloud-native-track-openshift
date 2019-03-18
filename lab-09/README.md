@@ -4,7 +4,7 @@ It's also possible to rollback your applications. Imagine that our last commit
 was not successful but Openshift deployed it anyway. We can easily rollback the
 deployment with the following steps.
 
-## Task : 01  Get the current deployment configs
+## Task 1:  Get the current deployment configs
 
 We will need the name of the deployment config in order to rollback the entire
 deployment.
@@ -34,4 +34,13 @@ oc get route
 ```
 
 We succefully rolled back our application. If you for example tweaked the colour
-of the deploy you will see that the old color is back. 
+of the deploy you will see that the old color is back.
+
+## Task 2 : Delete your project
+
+You can delete your project in the web console or via the CLI with the following
+command.
+
+```
+oc delete project scm-web-hooks-${USERNAME}
+```
