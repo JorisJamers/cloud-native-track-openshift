@@ -19,7 +19,7 @@ oc new-project configmap-${USERNAME} --display-name="Use ConfigMap"
 With a configmap we are able to easily pass environment variables to the deployment
 we are creating.
 
-Create a file ui.properties with the following content:
+Create a file `ui.properties` with the following content:
 
 ```
 color=blue
