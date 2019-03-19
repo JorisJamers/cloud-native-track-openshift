@@ -198,5 +198,5 @@ external docker image and navigate around. Get ready for more fun stuff!
 Delete the project with the following command.
 
 ```
-oc new-project labs-${USERNAME}
+oc delete project labs-${USERNAME}
 ```
