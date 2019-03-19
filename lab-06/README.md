@@ -100,3 +100,12 @@ browser.
 ```
 oc get route
 ```
+
+## Task 3: Delete your project
+
+You can delete your project in the web console or via the CLI with the following
+command.
+
+```
+oc delete project routes-${USERNAME}
+```
