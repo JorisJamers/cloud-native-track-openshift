@@ -50,12 +50,12 @@ metrics, logs and terminal also available for monitoring.
 Click on `Terminal` tab, you will be able to access the pod from web
 console.
 
-![terminal_view.png](../images/terminal_view.png "terminal_view")
+![terminal_view](../images/terminal_view.png "terminal_view")
 
 When navigating to `Applications``Pods` you are able to check the metrics for the
 pod you have selected in the `Metrics` tab.
 
-![pod_metrics.png](../images/pod_metrics.png "pod_metrics")
+![pod_metrics](../images/pod_metrics.png "pod_metrics")
 
 Click `Builds` on left menu and select `Builds`. Select the build name
 `time` and then click on `Configuration` tab. Note there are webhook
