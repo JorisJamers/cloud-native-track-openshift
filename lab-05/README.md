@@ -49,8 +49,8 @@ on the kind of application you are running.
 Click `Save` and you will get the message that the horizontal autoscaling for
 `jenkins` is successful.
 
-When you navigate to `Applications``Pods` you will now notice that a second pod
-is preparing. When this is done you will have the `2` minimum pods of the `jenkins`
+When you navigate to `Applications` `Pods` you will now notice that a second pod
+is preparing.This could take a minute. When this is done you will have the `2` minimum pods of the `jenkins`
 instance.
 
 ![autoscaler_pods_2](../images/autoscaler_pods_2.png "autoscaler_pods_2")
