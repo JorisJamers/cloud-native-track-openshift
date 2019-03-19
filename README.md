@@ -16,7 +16,7 @@ In this hands-on workshop you will learn the basics of OpenShift.
 * [Lab 09 - Rolling back applications](lab-09)
 * [Lab 10 - Using Config Map](lab-10)
 * [Lab 11 - Labeling nodes](lab-11)
-
+* [Lab XX - Install minishift and oc binary](lab-XX)
 
 ## People
 
