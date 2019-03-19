@@ -71,6 +71,10 @@ oc create -f node-app-build.json
 After a while you will be able to browse to the endpoint shown on the dashboard.
 You will see that we will get a blue background with the `Hello World!` message.
 
+```
+oc get route
+```
+
 ## Task 3 : Edit the configmap
 
 ```
