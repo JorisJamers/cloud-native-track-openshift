@@ -16,7 +16,7 @@ deployment.
 
 ![autoscaler_catalog_jenkins](../images/autoscaler_catalog_jenkins.png "autoscaler_catalog_jenkins")
 
-Click on the normal `Jenkins` app and just click `Next`. Now click `Create` and
+Click on the normal `Jenkins (Ephemeral)` app and just click `Next`. Now click `Create` and
 `Create Anyway` afterwards click `Close`. You will be able to see in the dashboard
 that a new application has been created in the project.
 
