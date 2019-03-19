@@ -76,7 +76,7 @@ In the meanwhile lets have a look at the buildconfig by running the command
 shown below.
 
 ```
-oc get bc time -o yaml
+oc get bc time -o json
 
 {
     "kind": "BuildConfig",
@@ -198,7 +198,7 @@ process. Let us also quickly look at the deployment configuration by running the
 following command. Note dc represents deploymentconfig.
 
 ```
-oc get dc -o yaml
+oc get dc -o json
 
 {
     "apiVersion": "v1",
