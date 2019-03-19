@@ -1,5 +1,11 @@
 # Lab XX - Install minishift and oc binary
 
+## Task 0: Installing VirtualBox
+
+By default `minikube` uses `VirtualBox` to run its VM.  To install VirtualBox
+download the latest [https://download.virtualbox.org/virtualbox/6.0.4/VirtualBox-6.0.4-128413-OSX.dmg](package)
+and install it.
+
 ## Task 1: Install minishift
 
 The minishift installation is pretty similar to the minikube installation.
