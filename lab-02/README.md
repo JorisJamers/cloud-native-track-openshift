@@ -390,13 +390,12 @@ time      time-mycliproject-UserName.apps.workshop.osecloud.com             time
 ## Task 6: Running the application
 
 Now run the application by using the route you provided in the previous step.
-You can use either curl or your browser. The application displays time.
-*If you don’t provide time.php extension, it displays apache’s default index
-page.*
+You can use either curl or your browser. The application displays a success
+message.
 
 ```
 curl time-mycliproject-UserName.apps.workshop.osecloud.com
-Wednesday 1st of July 2015 01:12:20 AM
+Congratulations you just deployed your app by using a Docker build strategy!
 ```
 
 Congratulations!! In this exercise you have learnt how to create, build and
