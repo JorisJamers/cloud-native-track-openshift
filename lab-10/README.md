@@ -11,7 +11,7 @@ export USERNAME=<username>
 Now create the new project with the variable.
 
 ```
-oc new-project configmap-${USERNAME} --display-name="Test WebHooks"
+oc new-project configmap-${USERNAME} --display-name="Use ConfigMap"
 ```
 
 ## Task 2 : Create an application with configmap
