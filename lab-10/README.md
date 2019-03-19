@@ -82,6 +82,8 @@ oc edit configmap config
 ```
 
 Edit the color to green and you a new app should be deployed with the new config.
+This might take a while, so you will probably need to refresh a couple of times
+before the change goes live. 
 
 ## Task 4 : Delete your project
 
